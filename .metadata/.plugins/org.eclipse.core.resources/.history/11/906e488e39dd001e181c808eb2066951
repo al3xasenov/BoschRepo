@@ -145,7 +145,6 @@ int main(void)
   /* definition and creation of defaultTask */
 
   char Hello []= "Hello world !\r\n";
-  char NewMsg[] = "This is new msg allert";
 
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
@@ -154,7 +153,6 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  HAL_UART_Transmit(&huart1, (uint8_t *)&Hello , strlen(Hello) , 1);
-	  HAL_UART_Transmit(&huart1, (uint8_t *)&NewMsg , strlen(NewMsg) , 1);
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
